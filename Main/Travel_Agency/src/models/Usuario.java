@@ -1,4 +1,4 @@
-package Hotels.models;
+package models;
 
 // usuario.java
 

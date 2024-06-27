@@ -1,15 +1,16 @@
-package Hotels.models;
+package models;
+
 
 public class Hotel {
     private String nomeHotel;
+    private int vagas;
     private int estrelas;
-    private String local;
     private int valorNoite;
 
-    public Hotel(String nomeHotel, int estrelas, String local, int valorNoite) {
+    public Hotel(String nomeHotel, int estrelas, int vagas, int valorNoite) {
         this.nomeHotel = nomeHotel;
         this.estrelas = estrelas;
-        this.local = local;
+        this.vagas = vagas;
         this.valorNoite = valorNoite;
     }
 
@@ -29,12 +30,12 @@ public class Hotel {
         this.estrelas = estrelas;
     }
 
-    public String getLocal() {
-        return local;
+    public int getvagas() {
+        return vagas;
     }
 
-    public void setLocal(String local) {
-        this.local = local;
+    public void setVagas(int vagas) {
+        this.vagas = vagas;
     }
 
     public int getValorNoite() {

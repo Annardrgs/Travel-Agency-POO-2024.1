@@ -1,20 +1,23 @@
 
-package Hotels.models;
+package models;
 //voo.java
+
 
 public class Voo{
   private String origem;
   private String destino;
   private int valorVoo;
-  private int codigoAereo;
+  private int vagas;
+  private String data;
 
   //construtor
   
-  public Voo(String origem, String destino, int valorVoo, int codigoAereo){
+  public Voo(String origem, String destino, int valorVoo, int vagas, String data){
     this.origem = origem;
     this.destino = destino;
     this.valorVoo = valorVoo;
-    this.codigoAereo = codigoAereo;
+    this.vagas = vagas;
+    this.data = data;
   }
   
   //gets e sets
@@ -26,7 +29,7 @@ public class Voo{
     this.origem = origem;
   }
   
-  public String getDestino(String destino){
+  public String getDestino(){
     return destino;
   }
   
@@ -42,11 +45,14 @@ public class Voo{
     this.valorVoo = valorVoo;
   }
   
-  public int getCodigoAereo{
-    return codigoAereo;
+  public void setvagas(int vagas){
+    this.vagas = vagas;
   }
-  
-  public void setCodigoAereo(int codigoAereo){
-    this.codigoAereo = codigoAereo;
+
+  public int getvagas(){
+    return this.vagas;
+  }
+  public String getdata(){
+    return this.data;
   }
 }
