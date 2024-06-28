@@ -6,12 +6,14 @@ public class Costumer{
   private String Destination;
   private int NightAmount;
   private int Stars;
+  private int MaxPrice;
   
-  public Costumer(String Name, int NightAmount, String DepartureLocation, String Destination, int Stars){
+  public Costumer(String Name, int NightAmount, String DepartureLocation, String Destination, int Stars, int MaxPrice){
     this.Name = Name;
     this.DepartureLocation = DepartureLocation;
     this.Destination = Destination;
     this.Stars = Stars;
+    this.MaxPrice = MaxPrice;
   }
   
   public String getName(){
@@ -44,5 +46,13 @@ public class Costumer{
   
   public void setStars(int Stars){
     this.Stars = Stars;
+  }
+
+  public int getMaxPrince(){
+    return MaxPrice;
+  }
+
+  public void setMaxPrice(int MaxPrice){
+    this.MaxPrice = MaxPrice;
   }
 }
