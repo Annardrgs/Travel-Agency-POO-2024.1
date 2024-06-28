@@ -1,48 +1,57 @@
 package models;
 
+public class Hotels {
+    private String HotelLocation;
+    private String HotelNumber;
+    private int VacancyAmount;
+    private int NightCost;
+    private int HotelStars;
 
-public class Hotel {
-    private String nomeHotel;
-    private int vagas;
-    private int estrelas;
-    private int valorNoite;
-
-    public Hotel(String nomeHotel, int estrelas, int vagas, int valorNoite) {
-        this.nomeHotel = nomeHotel;
-        this.estrelas = estrelas;
-        this.vagas = vagas;
-        this.valorNoite = valorNoite;
+    public Hotels(String HotelLocation, String HotelNumber, int VacancyAmount, int NightCost, int HotelStars) {
+        this.HotelLocation = HotelLocation;
+        this.HotelNumber = HotelNumber;
+        this.VacancyAmount = VacancyAmount;
+        this.NightCost = NightCost;
+        this.HotelStars = HotelStars;
     }
 
-    public String getNomeHotel() {
-        return nomeHotel;
+    public String getHotelLocation() {
+        return HotelLocation;
     }
 
-    public void setNomeHotel(String nomeHotel) {
-        this.nomeHotel = nomeHotel;
+    public void setHotelLocation(String HotelLocation) {
+        this.HotelLocation = HotelLocation;
     }
 
-    public int getEstrelas() {
-        return estrelas;
+    public String getHotelNumber() {
+        return HotelNumber;
     }
 
-    public void setEstrelas(int estrelas) {
-        this.estrelas = estrelas;
+    public void setHotelNumber(String HotelNumber) {
+        this.HotelNumber = HotelNumber;
     }
 
-    public int getvagas() {
-        return vagas;
+    public int getVacancyAmount(){
+        return VacancyAmount;
     }
 
-    public void setVagas(int vagas) {
-        this.vagas = vagas;
+    public void setVacancyAmount(int VacancyAmount) {
+        this.VacancyAmount = VacancyAmount;
     }
 
-    public int getValorNoite() {
-        return valorNoite;
+    public int getNightCost() {
+        return NightCost;
     }
 
-    public void setValorNoite(int valorNoite) {
-        this.valorNoite = valorNoite;
+    public void setNightCost(int NightCost) {
+        this.NightCost = NightCost;
+    }
+
+    public int getHotelStars() {
+        return HotelStars;
+    }
+
+    public void setHotelStars(int HotelStars) {
+        this.HotelStars = HotelStars;
     }
 }
