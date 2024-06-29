@@ -1,5 +1,5 @@
 
-package models;
+package classes;
 
 public class Flight{
   private String DepartureLocation;
@@ -26,7 +26,7 @@ public class Flight{
     this.DepartureLocation = DepartureLocation;
   }
   
-  public String getDestination(String Destination){
+  public String getDestination(){
     return Destination;
   }
   
@@ -34,7 +34,7 @@ public class Flight{
     this.Destination = Destination;
   }
 
-  public String getDepartureDate(String DepartureDate){
+  public String getDepartureDate(){
     return DepartureDate;
   }
   
@@ -42,7 +42,7 @@ public class Flight{
     this.DepartureDate = DepartureDate;
   }
 
-  public String getDepartureTime(String DepartureTime){
+  public String getDepartureTime(){
     return DepartureTime;
   }
   
@@ -58,7 +58,7 @@ public class Flight{
     this.FlightPrice = FlightPrice;
   }
   
-  public int getEmptySeats{
+  public int getEmptySeats(){
     return EmptySeats;
   }
   

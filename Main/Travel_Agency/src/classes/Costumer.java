@@ -1,4 +1,4 @@
-package models;
+package classes;
 
 public class Costumer{
   private String Name;
@@ -14,8 +14,9 @@ public class Costumer{
     this.Destination = Destination;
     this.Stars = Stars;
     this.MaxPrice = MaxPrice;
+    this.NightAmount = NightAmount;
   }
-  
+
   public String getName(){
     return Name;
   }
@@ -48,11 +49,19 @@ public class Costumer{
     this.Stars = Stars;
   }
 
-  public int getMaxPrince(){
+  public int getMaxPrice(){
     return MaxPrice;
   }
 
   public void setMaxPrice(int MaxPrice){
     this.MaxPrice = MaxPrice;
+  }
+  
+  public void setNightAmount(int nightAmount) {
+      NightAmount = nightAmount;
+  }
+
+  public int getNightAmount() {
+      return NightAmount;
   }
 }
