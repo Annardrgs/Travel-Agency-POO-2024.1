@@ -1,4 +1,10 @@
-cliente 0;RIO;SAO;2 dias;4 estrelas;R$ 3000
-cliente 1;RIO;PMW;2 dias;4 estrelas;R$ 3000
-cliente 1;RIO;SAO;2 dias;4 estrelas;R$ 3000
-cliente 2;RIO;SAO;2 dias;4 estrelas;R$ 3000
+Rodrigo;RIO;SAO;2 dias;4 estrelas;R$ 3000
+Felipe;RIO;PMW;2 dias;4 estrelas;R$ 3000
+Felipe;RIO;SAO;2 dias;4 estrelas;R$ 3000
+Anna;RIO;SAO;2 dias;4 estrelas;R$ 3000
+Mateus;RIO;BHZ;3 dias;5 estrelas;R$ 4000
+Mateus;RIO;SSA;4 dias;3 estrelas;R$ 4000
+Mariana;RIO;FOR;2 dias;4 estrelas;R$ 3200
+Pedro;RIO;NYC;100 dias;5 estrelas;R$ 30
+Anna;RIO;REC;2 dias;4 estrelas;R$ 3100
+Mateus;RIO;POA;4 dias;5 estrelas;R$ 4000

@@ -1,20 +1,15 @@
 package classes;
+import java.util.*;
 
 public class Costumer{
   private String Name;
-  private String DepartureLocation;
-  private String Destination;
-  private int NightAmount;
-  private int Stars;
   private int MaxPrice;
+  private List<Request> requests;
   
-  public Costumer(String Name, int NightAmount, String DepartureLocation, String Destination, int Stars, int MaxPrice){
+  public Costumer(String Name, int MaxPrice){
     this.Name = Name;
-    this.DepartureLocation = DepartureLocation;
-    this.Destination = Destination;
-    this.Stars = Stars;
     this.MaxPrice = MaxPrice;
-    this.NightAmount = NightAmount;
+    this.requests = new ArrayList<>();
   }
 
   public String getName(){
@@ -25,30 +20,6 @@ public class Costumer{
     this.Name = Name;
   }
   
-  public String getDepartureLocation(){
-    return DepartureLocation;
-  }
-  
-  public void setDepartureLocation(String DepartureLocation){
-    this.DepartureLocation = DepartureLocation;
-  }
-  
-  public String getDestination(){
-    return Destination;
-  }
-  
-  public void setDestination(String Destination){
-    this.Destination = Destination;
-  }
-  
-  public int getStars(){
-    return Stars;
-  }
-  
-  public void setStars(int Stars){
-    this.Stars = Stars;
-  }
-
   public int getMaxPrice(){
     return MaxPrice;
   }
@@ -56,12 +27,12 @@ public class Costumer{
   public void setMaxPrice(int MaxPrice){
     this.MaxPrice = MaxPrice;
   }
-  
-  public void setNightAmount(int nightAmount) {
-      NightAmount = nightAmount;
+
+  public List<Request> getRequests() {
+      return requests;
   }
 
-  public int getNightAmount() {
-      return NightAmount;
+  public void addRequest(Request r){
+    this.requests.add(r);
   }
 }
