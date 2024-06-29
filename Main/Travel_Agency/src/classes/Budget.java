@@ -1,6 +1,6 @@
-package models;
+package classes;
 
-public class Budget {
+public class Budget{
     private String Hotel;
     private int NightAmount;
     private String Flight;

@@ -1,13 +1,13 @@
-package models;
+package classes;
 
-public class Hotels {
+public class Hotel {
     private String HotelLocation;
     private String HotelNumber;
     private int VacancyAmount;
     private int NightCost;
     private int HotelStars;
 
-    public Hotels(String HotelLocation, String HotelNumber, int VacancyAmount, int NightCost, int HotelStars) {
+    public Hotel(String HotelLocation, String HotelNumber, int VacancyAmount, int NightCost, int HotelStars) {
         this.HotelLocation = HotelLocation;
         this.HotelNumber = HotelNumber;
         this.VacancyAmount = VacancyAmount;
