@@ -1,3 +1,39 @@
-RIO;Hotel 1;10 vagas;R$ 1000;5 estrelas
-RIO;Hotel 2;20 vagas;R$ 500;4 estrelas
-RIO;Hotel 3;10 vagas;R$ 600;2 estrelas
+RIO;Copacabana Palace;5 vagas;R$ 1200;1 estrelas
+RIO;Hilton Barra Rio de Janeiro;15 vagas;R$ 800;4 estrelas
+RIO;Windsor Marapendi;10 vagas;R$ 900;5 estrelas
+SAO;Tivoli Mofarrej São Paulo;10 vagas;R$ 1100;5 estrelas
+SAO;Renaissance São Paulo Hotel;20 vagas;R$ 900;4 estrelas
+SAO;Hotel Fasano São Paulo;5 vagas;R$ 1300;2 estrelas
+PMW;Hotel Girassol Plaza;10 vagas;R$ 700;3 estrelas
+PMW;Hplus Premium Palmas;8 vagas;R$ 600;4 estrelas
+PMW;Victoria Plaza Hotel;15 vagas;R$ 500;3 estrelas
+BHZ;Ouro Minas Palace Hotel;10 vagas;R$ 800;2 estrelas
+BHZ;Royal Boutique Savassi Hotel;12 vagas;R$ 700;4 estrelas
+BHZ;Mercure Belo Horizonte Lourdes Hotel;15 vagas;R$ 600;3 estrelas
+SSA;Iberostar Bahia;10 vagas;R$ 1000;5 estrelas
+SSA;Hotel Deville Prime Salvador;20 vagas;R$ 900;4 estrelas
+SSA;Wish Hotel da Bahia;15 vagas;R$ 800;4 estrelas
+FOR;Carmel Charme Resort;10 vagas;R$ 1100;2 estrelas
+FOR;Hotel Gran Marquise;18 vagas;R$ 900;5 estrelas
+FOR;Crocobeach Hotel;12 vagas;R$ 700;3 estrelas
+CWB;Radisson Hotel Curitiba;10 vagas;R$ 850;5 estrelas
+CWB;NH Curitiba The Five;20 vagas;R$ 700;4 estrelas
+CWB;Bourbon Curitiba Convention Hotel;15 vagas;R$ 750;4 estrelas
+REC;NANNAI Muro Alto;10 vagas;R$ 1200;2 estrelas
+REC;Hotel Atlante Plaza;15 vagas;R$ 800;3 estrelas
+REC;Mar Hotel Conventions;20 vagas;R$ 600;4 estrelas
+POA;Sheraton Porto Alegre Hotel;10 vagas;R$ 900;5 estrelas
+POA;Hotel Laghetto Viverone Moinhos;15 vagas;R$ 700;4 estrelas
+POA;Intercity Porto Alegre;20 vagas;R$ 650;4 estrelas
+BSB;Royal Tulip Brasília Alvorada;10 vagas;R$ 950;5 estrelas
+BSB;Hotel Nacional;15 vagas;R$ 700;3 estrelas
+BSB;B Hotel Brasília;20 vagas;R$ 800;5 estrelas
+MAO;Hotel Villa Amazônia;10 vagas;R$ 1000;5 estrelas
+MAO;Intercity Manaus;15 vagas;R$ 700;4 estrelas
+MAO;Blue Tree Premium Manaus;20 vagas;R$ 600;3 estrelas
+VIX;Sheraton Vitória Hotel;10 vagas;R$ 900;5 estrelas
+VIX;Golden Tulip Porto Vitória;15 vagas;R$ 700;3 estrelas
+VIX;Comfort Suites Vitória;20 vagas;R$ 600;4 estrelas
+NAT;Serhs Natal Grand Hotel & Resort;10 vagas;R$ 1100;5 estrelas
+NAT;Ocean Palace Beach Resort & Bungalows;15 vagas;R$ 1000;5 estrelas
+NAT;Best Western Premier Majestic Ponta Negra Beach;20 vagas;R$ 800;4 estrelas
