@@ -51,4 +51,8 @@ public class Request{
     public Boolean getAccepted() {
         return Accepted;
     }
+
+    public void setAccepted(){
+        this.Accepted = true;
+    }
 }
