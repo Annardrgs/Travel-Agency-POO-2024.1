@@ -1,7 +1,7 @@
 import java.util.*;
 
-import classes.Costumer;
 import classes.Hotel;
+import classes.ProcessamentoSequencial;
 import classes.Request;
 import classes.Flight;
 
@@ -10,23 +10,24 @@ import java.io.FileNotFoundException;
 
 public class FileReader{
     public static void main(String[] args) {
-        List<Costumer> clients = ReadCostumers();
+        
+        List<Request> requests = ReadRequests();
+        
         System.out.println("=== CLIENTES ===");
-        for(int i = 0; i < clients.size(); i++){
-            System.out.println("--Pedidos de " + clients.get(i).getName() + "--");
-            System.out.println("Saldo disponível: R$ " + clients.get(i).getMaxPrice());
-            for(int j = 0; j < clients.get(i).getRequests().size(); j++){
-                System.out.print("(" + clients.get(i).getRequests().get(j).getDepartureLocation() + " -> ");
-                System.out.print(clients.get(i).getRequests().get(j).getDestination() + ") | ");
-                System.out.print(clients.get(i).getRequests().get(j).getNightAmount() + " dias | ");
-                System.out.print(clients.get(i).getRequests().get(j).getStars() + " estrelas ");
-                System.out.println();
-            }
+        for(int i = 0; i < requests.size(); i++){
+            System.out.println("--Pedido de " + requests.get(i).getName() + "--");
+            System.out.println("Saldo disponível: R$ " + requests.get(i).getMaxPrice());
+            System.out.print("(" + requests.get(i).getDepartureLocation() + " -> ");
+            System.out.print(requests.get(i).getDestination() + ") | ");
+            System.out.print(requests.get(i).getNightAmount() + " dias | ");
+            System.out.print(requests.get(i).getStars() + " estrelas ");
+            System.out.println();
             System.out.println();
         }
-
-        System.out.println("=== HOTÉIS ===");
+        
+        
         List<Hotel> hotels = ReadHotels();
+        System.out.println("=== HOTÉIS ===");
         for(int i = 0; i < hotels.size(); i++){
             System.out.print("(" + hotels.get(i).getHotelLocation() + ") ");
             System.out.print(hotels.get(i).getHotelNumber() + " | ");
@@ -36,9 +37,10 @@ public class FileReader{
             System.out.println();
         }
         System.out.println();
-
-        System.out.println("=== VOOS ===");
+        
+        
         List<Flight> flights = ReadFlights();
+        System.out.println("=== VOOS ===");
         for(int i = 0; i < flights.size(); i++){
             System.out.print("(" + flights.get(i).getDepartureLocation() + " -> ");
             System.out.print(flights.get(i).getDestination() + ") | ");
@@ -48,14 +50,24 @@ public class FileReader{
             System.out.print("R$ " + flights.get(i).getFlightPrice());
             System.out.println();
         }
+        System.out.println();
+
+        ProcessamentoSequencial p = new ProcessamentoSequencial();
+        p.processaPedidos(requests, hotels, flights);
+        System.out.println("Pedidos: " + p.getQuantidadeDePedidos());
+        System.out.println("Clientes diferentes: " + p.getClientesDiferentes());
+        System.out.println("Pedidos atendidos: " + p.getPedidosAtendidos());
+        System.out.println("Valor total gasto: " + p.getGastosTotais());
+        System.out.println("Valor gasto em hoteis: " + p.getGastosHoteis());
+        System.out.println("Valor gasto em voos: " + p.getGastosVoos());
     }
     
-
-    public static List<Costumer> ReadCostumers(){
+        
+    public static List<Request> ReadRequests(){
         try{
             Scanner Reader = new Scanner(new File("data/formato-clientes.csv"));
 
-            List<Costumer> clients = new ArrayList<>();
+            List<Request> requests = new ArrayList<>();
             //Delimitador para usar o .next do Scanner
             Reader.useDelimiter(";");
 
@@ -67,7 +79,6 @@ public class FileReader{
             int maxPrice;
             String auxiliar;
             String[] auxiliarVector;
-            Request request;
 
             while(Reader.hasNextLine()){
                 name = Reader.next();
@@ -82,27 +93,15 @@ public class FileReader{
                 
                 auxiliar = Reader.next();
                 stars = auxiliar.charAt(0) - '0';
-
-                request = new Request(nightAmount, departureLocation, Destination, stars);
                 
-                Boolean exists = false;
-                for(Costumer c: clients){
-                    if(c.getName().equals(name)){
-                        c.addRequest(request);
-                        exists = true;
-                    }
-                }
-
                 auxiliar = Reader.nextLine();
                 auxiliarVector = auxiliar.split(" ");
                 maxPrice = Integer.parseInt(auxiliarVector[1]);
-                if(!exists){                    
-                    clients.add(new Costumer(name, maxPrice));
-                    clients.getLast().addRequest(request);
-                }
+
+                requests.add(new Request(name, maxPrice, nightAmount, departureLocation, Destination, stars));
             }
             Reader.close();
-            return clients;
+            return requests;
         } catch(FileNotFoundException e){
             System.out.println("Erro na leitura do arquivo");
             return null;
