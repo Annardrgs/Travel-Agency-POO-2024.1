@@ -45,4 +45,4 @@ Exploração de funcionalidades adicionais, como:
 - Igor Machado Coelho
 
 ## Data de Apresentação
-Undefined.
+01/07/2024 ou 03/07/2024
