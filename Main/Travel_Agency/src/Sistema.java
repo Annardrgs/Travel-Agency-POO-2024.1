@@ -121,7 +121,11 @@ public class Sistema implements Runnable {
     public void run(){
         List<Request> req = new ArrayList<>();
         req = get_t_list(); // conjunto de requests selecionado
+        for(Request cliente : req){
+            System.out.println(cliente.getName());
+        }
         for(int i = 0; i< req.size(); i++){ // iteração para cada request
+            Boolean k = false;
             Request e = req.get(i);
             add_client(e.getName());
             if(cities.get(e.getDestination()) == null || cities.get(e.getDepartureLocation()) == null){ //verificação para saber se as cidades estão no sistema
@@ -135,16 +139,19 @@ public class Sistema implements Runnable {
             if(h != null && !v.isEmpty()){
                 alterar_vagas_hotel(h,-1);
                 if(h.getVacancyAmount() < 0){ // caso as vagas do hotel tenham sido esgotadas
-                    alterar_vagas_hotel(h,+1);
+                    alterar_vagas_hotel(h, 1);
                     continue;
                 }                
                 alterar_vagas_voo(v, -1);
                 for(int j = 0; j<v.size(); j++){ // caso algum dos voos tenha se esgotado
-                    if(v.get(j).getEmptySeats() < 0);
-                    alterar_vagas_hotel(h,+1);
-                    alterar_vagas_voo(v, +1);
-                    continue;
+                    if(v.get(j).getEmptySeats() < 0){
+                        alterar_vagas_hotel(h, 1);
+                        alterar_vagas_voo(v, 1);
+                        k = true;
+                        break;
+                    }
                 }
+                if(k) continue;
                 //atualização de gastos e adição do request na lista de aceitos
                 plus_gasto_voos(v);
                 plus_gasto_hoteis(h.getNightCost()* e.getNightAmount());
@@ -157,5 +164,4 @@ public class Sistema implements Runnable {
             }
         }
     }
-
 }
