@@ -65,7 +65,7 @@ public class FileReader{
         
     public static List<Request> ReadRequests(){
         try{
-            Scanner Reader = new Scanner(new File("C://Users//T-Gamer//Documents//Java - POO - Vscode//Travel-Agency-POO-2024.1//Main//Travel_Agency//src//data/formato-clientes.csv"));
+            Scanner Reader = new Scanner(new File("data/formato-clientes.csv"));
 
             List<Request> requests = new ArrayList<>();
             //Delimitador para usar o .next do Scanner
@@ -110,7 +110,7 @@ public class FileReader{
 
     public static List<Hotel> ReadHotels(){
         try {
-            Scanner Reader = new Scanner(new File("C://Users//T-Gamer//Documents//Java - POO - Vscode//Travel-Agency-POO-2024.1//Main//Travel_Agency//src//data/formato-hoteis.csv"));
+            Scanner Reader = new Scanner(new File("data/formato-hoteis.csv"));
             //Delimitador para usar o .next do Scanner
             Reader.useDelimiter(";");
             List<Hotel> hoteis = new ArrayList<>();
@@ -149,7 +149,7 @@ public class FileReader{
     }
     public static List<Flight> ReadFlights(){
         try {
-            Scanner Reader = new Scanner(new File("C://Users//T-Gamer//Documents//Java - POO - Vscode//Travel-Agency-POO-2024.1//Main//Travel_Agency//src//data/formato-voos.csv"));
+            Scanner Reader = new Scanner(new File("data/formato-voos.csv"));
             //Delimitador para usar o .next do Scanner
             Reader.useDelimiter(";");
             List<Flight> voos = new ArrayList<>();
