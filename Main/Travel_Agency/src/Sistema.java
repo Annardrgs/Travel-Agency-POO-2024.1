@@ -132,7 +132,7 @@ public class Sistema implements Runnable {
                 e.setMaxPrice(e.getMaxPrice() - h.getNightCost() * e.getNightAmount()); //altera o budget do cliente
             }
             List<Flight> v = ReservaService.encontrarMelhorVoo(flights, e.getDepartureLocation(), e.getDestination(), e.getMaxPrice()); // retorna o melhor conjunto de voos para o cliente
-            if(h != null && v != null){
+            if(h != null && !v.isEmpty()){
                 alterar_vagas_hotel(h,-1);
                 if(h.getVacancyAmount() < 0){ // caso as vagas do hotel tenham sido esgotadas
                     alterar_vagas_hotel(h,+1);
