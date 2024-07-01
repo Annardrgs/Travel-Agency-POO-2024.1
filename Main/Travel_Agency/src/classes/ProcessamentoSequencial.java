@@ -87,7 +87,7 @@ public class ProcessamentoSequencial extends ReservaService {
                 atualizaSaldo(c, h);
             }
             List<Flight> v = encontrarMelhorVoo(voos, c.getDepartureLocation(), c.getDestination(), c.getMaxPrice());
-            if(h != null && v != null){
+            if(h != null && v.size() > 0){
                 gastoHoteis(h, c.getNightAmount());
                 atualizaVagasHotel(h);
                 gastoVoos(v);

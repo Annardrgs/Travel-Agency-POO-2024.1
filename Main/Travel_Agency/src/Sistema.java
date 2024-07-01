@@ -9,7 +9,6 @@ import classes.City;
 import classes.Hotel;
 import classes.Request;
 import classes.ReservaService;
-//import classes.Costumer;
 import classes.Flight;
 
 public class Sistema implements Runnable {
@@ -22,7 +21,6 @@ public class Sistema implements Runnable {
     public int hotelExpenses = 0; // int que guarda valor gasto em hoteis
     public int flightExpenses = 0; // int que guarda valor gasto com voos
     public List<List<Request>> tValues = new ArrayList<>(); // lista de lista de request de cada thread
-    
     
 
     public Sistema(String file_requests, String file_flight, String file_hotel) { // inicialização do sistema, funções de leitura e criação de listas/sets
