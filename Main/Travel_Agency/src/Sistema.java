@@ -121,9 +121,6 @@ public class Sistema implements Runnable {
     public void run(){
         List<Request> req = new ArrayList<>();
         req = get_t_list(); // conjunto de requests selecionado
-        for(Request cliente : req){
-            System.out.println(cliente.getName());
-        }
         for(int i = 0; i< req.size(); i++){ // iteração para cada request
             Boolean k = false;
             Request e = req.get(i);

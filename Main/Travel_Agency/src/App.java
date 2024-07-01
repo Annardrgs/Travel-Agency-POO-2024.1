@@ -1,3 +1,6 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -11,7 +14,7 @@ public class App {
     public static void main(String[] args) throws Exception {
        String arq_flight, arq_hotel, arq_requests; //declarando paths dos arquivos
 
-       arq_requests = "Main\\Travel_Agency\\src\\data\\formato-clientes100.csv";
+       arq_requests = "Main\\Travel_Agency\\src\\data\\formato-clientes10000.csv";
        arq_flight = "Main\\Travel_Agency\\src\\data\\formato-voos.csv";
        arq_hotel = "Main\\Travel_Agency\\src\\data\\formato-hoteis.csv";
        /* Descomente caso queira adicionar os paths manualmente
@@ -114,11 +117,41 @@ public class App {
         
 
         
-
+       //medidas de desempenho
 
         System.out.println("============Testes de Desempenho===========");
         System.out.println("tempo sequencial: " +(endTimeSequencial - startTimeSequencial) +" ms" );
         System.out.println("tempo Threads: " +(endTimeThread - startTimeThread)+ " ms");
+
+
+        // funções para escrita das saidas .csv
+        String saida = String.format("%d;%d;%d;R$ %d;R$ %d;R$ %d", sis.requests.size(), sis.clients.size(),sis.budgetsApproved.size(),sis.flightExpenses+ sis.hotelExpenses,sis.hotelExpenses, sis.flightExpenses);
+        
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("saida-paralela.csv"))) {
+            writer.write(saida);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        saida = String.format("%d;%d;%d;R$ %d;R$ %d;R$ %d",
+        p.getQuantidadeDePedidos(),
+        p.getClientesDiferentes(),
+        p.getPedidosAtendidos(),
+        p.getGastosTotais(),
+        p.getGastosHoteis(),
+        p.getGastosVoos());
+        
+        // Escrever no arquivo saida-paralela.csv
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter("saida-sequencial.csv"))) {
+            writer.write(saida);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+
+
         
     }
 }
