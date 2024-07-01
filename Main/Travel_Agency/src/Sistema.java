@@ -5,12 +5,12 @@ import java.util.Map;
 import classes.City;
 import classes.Hotel;
 import classes.Budget;
-import classes.Costumer;
+import classes.Request;
 import classes.Flight;
 
 public class Sistema implements Runnable {
     public Map<String,City> cidades = new HashMap<>(); // Map criado no metodo de inicialização da classe
-    public List<Costumer> usuarios = new ArrayList<>(); // Lista criada no metodo de inicialização da classe
+    public List<Request> usuarios = new ArrayList<>(); // Lista criada no metodo de inicialização da classe
     public List<Budget> orcamentosAceitos = new ArrayList<>(); // Lista preenchida por orcamentos aceitos(preenchidas pelas Threads)
     public List<Budget> orcamentosNegados = new ArrayList<>(); // Lista preenchida por orcamentos negados(preenchidas pelas Threads)
     public int gastoHoteis = 0; // int que guarda valor gasto em hoteis
