@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 
 public class FileReader{
+    /*
     public static void main(String[] args) {
         
         List<Request> requests = ReadRequests();
@@ -61,11 +62,12 @@ public class FileReader{
         System.out.println("Valor gasto em hoteis: " + p.getGastosHoteis());
         System.out.println("Valor gasto em voos: " + p.getGastosVoos());
     }
-    
+    */
         
-    public static List<Request> ReadRequests(){
+    public static List<Request> ReadRequests(String file){
+        
         try{
-            Scanner Reader = new Scanner(new File("data/formato-clientes.csv"));
+            Scanner Reader = new Scanner(new File(file));
 
             List<Request> requests = new ArrayList<>();
             //Delimitador para usar o .next do Scanner
@@ -108,9 +110,9 @@ public class FileReader{
         }
     }
 
-    public static List<Hotel> ReadHotels(){
+    public static List<Hotel> ReadHotels(String file){
         try {
-            Scanner Reader = new Scanner(new File("data/formato-hoteis.csv"));
+            Scanner Reader = new Scanner(new File(file));
             //Delimitador para usar o .next do Scanner
             Reader.useDelimiter(";");
             List<Hotel> hoteis = new ArrayList<>();
@@ -147,9 +149,9 @@ public class FileReader{
             return null;
         }
     }
-    public static List<Flight> ReadFlights(){
+    public static List<Flight> ReadFlights(String file){
         try {
-            Scanner Reader = new Scanner(new File("data/formato-voos.csv"));
+            Scanner Reader = new Scanner(new File(file));
             //Delimitador para usar o .next do Scanner
             Reader.useDelimiter(";");
             List<Flight> voos = new ArrayList<>();
