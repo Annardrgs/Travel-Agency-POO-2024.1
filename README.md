@@ -33,6 +33,7 @@ Exploração de funcionalidades adicionais, como:
 ## Arquivos
 - `formato-voos.csv`: Formato dos arquivos de voo a serem utilizados
 - `formato-hoteis.csv`: Formato dos arquivos de hotel a serem utilizados
+- `formato-clientes.csv`: Formato dos arquivos de clientes a serem utilizados
 
 ## Autores
 - Anna Clara Rodrigues
